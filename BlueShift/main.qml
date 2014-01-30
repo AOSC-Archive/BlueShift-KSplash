@@ -3,26 +3,17 @@ Go look at WTFPL and see what happens to this.
 Jeff Bai <jeffbaichina@members.fsf.org>, 2014 for AOSC
 */
 
-import Qt 4.7
+import Qt 4.8
 
 Item {
     id: main
 
     width: screenSize.width
     height: screenSize.height
-    // width: 300
-    // height: 300
 
-    /* property declarations --------------------------{{{ */
     property int stage
     property int iconSize: (screenSize.width <= 1024) ? 256 : 450
-    /* }}} */
-
-    /* signal declarations ----------------------------{{{ */
-
-    /* }}} */
-
-    /* JavaScript functions ---------------------------{{{ */
+    
     onStageChanged: {
         if (stage == 1) {
             background.opacity = 1
@@ -45,39 +36,6 @@ Item {
         if (stage == 6) {
         }
     }
-    /* }}} */
-
-    /* object properties ------------------------------{{{ */
-
-    /* }}} */
-
-    /* child objects ----------------------------------{{{ */
-
-/*    Rectangle {
-        color: "black"
-        anchors.fill: parent
-    } */
-
-/*    Rectangle {
-        id: background
-
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "#000000" }
-            GradientStop { position: 1.0; color: "#000000" }
-        }
-
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-        }
-
-        height: gear.y - 32
-
-        opacity: 0
-        Behavior on opacity { NumberAnimation { duration: 1000; easing { type: Easing.InOutQuad } } }
-    }
-*/
 
     Image {
         id: gear
@@ -182,14 +140,5 @@ Item {
         Behavior on opacity { NumberAnimation { duration: 1000; easing { type: Easing.InOutQuad } } }
     }
 
-    /* }}} */
-
-    /* stages -----------------------------------------{{{ */
-
-    /* }}} */
-
-    /* transitions ------------------------------------{{{ */
-
-    /* }}} */
 }
 
